@@ -1,7 +1,6 @@
 use std::io;
 fn main() {
     let result: f64;
-    let mut op: String = String::new();
 
     println!("Hello, Welcome to Jolah's rust calculator!");
 
@@ -27,6 +26,7 @@ fn main() {
     println!("(2) Subtract");
     println!("(3) Multiply");
     println!("(4) Divide");
+    println!("(5) Modulus");
     println!("Select the number associated with the desired operation: ");
 
     let op: f64 = input_parser();
@@ -43,6 +43,7 @@ fn main() {
         2 => result = x - y,
         3 => result = x * y,
         4 => result = x / y,
+        5 => result = x % y,
         _ => {
             println!("Error: Invalid selection!");
             return;
@@ -59,7 +60,6 @@ fn input_parser() -> f64 {
     let x: f64 = match x.trim().parse() {
         Ok(num) => num,
         Err(_) => {
-            println!("Invalid input, please enter a valid number.");
             return f64::NAN;
         }
     };
