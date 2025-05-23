@@ -8,8 +8,19 @@ fn main() {
     println!("Please enter the first number: ");
     let x: f64 = input_parser();
 
+    if f64::is_nan(x) {
+        println!("Invalid input!");
+        return;
+    }
+
     println!("Please enter the second number: ");
     let y: f64 = input_parser();
+
+    if f64::is_nan(y) {
+        println!("Invalid input!");
+        return;
+    }
+    println!("Please select the operation you want to perform:");
 
     println!("List of operators:");
     println!("(1) Add");
@@ -18,14 +29,15 @@ fn main() {
     println!("(4) Divide");
     println!("Select the number associated with the desired operation: ");
 
-    io::stdin().read_line(&mut op).expect("Invalid input");
-    let op: i32 = match op.trim().parse() {
-        Ok(num) => num,
-        Err(_) => {
-            println!("Invalid input, please enter a valid number.");
-            return;
-        }
-    };
+    let op: f64 = input_parser();
+
+    if f64::is_nan(op) {
+        println!("Invalid input!");
+        return;
+    }
+
+    let op: i32 = op as i32;
+
     match op {
         1 => result = x + y,
         2 => result = x - y,
