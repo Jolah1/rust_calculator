@@ -15,14 +15,22 @@ Ensure Rust is installed on your system. If not, install from [rustup.rs](https:
 
 ### Clone the repository:
 
-bash```
+```bash
 
-git clone https://github.com/jolah1/rust-calculator.git
-
+git clone https://github.com/Jolah1/rust_calculator.git
 ```
+
 ```bash
 cd rust calculator
 ```
+### Build and run the project
+
+```bash
+cargo run
+```
+### 🙌 Contributions
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+Thank you.
 
 
 
