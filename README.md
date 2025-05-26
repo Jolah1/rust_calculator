@@ -21,7 +21,7 @@ git clone https://github.com/Jolah1/rust_calculator.git
 ```
 
 ```bash
-cd rust calculator
+cd rust_calculator
 ```
 ### Build and run the project
 
